@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace server.Models
+﻿namespace server.Dtos.UserDtos
 {
-    public class User
+    public class UserAddDto
     {
-        [Key]
-        public int Id { get; set; }
         public required string Email { get; set; }
         public required string Password { get; set; }
         public required string PasswordSalt { get; set; }

@@ -1,12 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Security.Cryptography.X509Certificates;
-
-namespace server.Models
+﻿namespace server.Dtos.JobDtos
 {
-    public class Job
+    public class JobDto
     {
-        [Key]
-        public int Id { get; set; }
+        public required int Id { get; set; }
         public required string Title { get; set; }
         public string? Description { get; set; }
         public string? Location { get; set; }
