@@ -1,8 +1,8 @@
 ﻿namespace server.Dtos.UserDtos
 {
-    public class UserForgotPasswordChangePasswordDto
+    public class UserLoginDto
     {
-        public required int Id { get; set; }
+        public required string Email { get; set; }
         public required string Password { get; set; }
     }
 }
