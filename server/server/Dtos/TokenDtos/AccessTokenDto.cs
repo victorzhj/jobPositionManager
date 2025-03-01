@@ -1,6 +1,6 @@
-﻿namespace server.Dtos.UserDtos
+﻿namespace server.Dtos.TokenDtos
 {
-    public class TokenDto
+    public class AccessTokenDto
     {
         public string TokenType { get; set; } = "Bearer";
         public required string AccessToken { get; set; }

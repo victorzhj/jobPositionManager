@@ -25,7 +25,7 @@ namespace server.Data
         /// </summary>
         public DbSet<Job> Job { get; set; }
 
-        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public DbSet<JobCategories> JobCategories { get; set; }
         public DbSet<UserCategories> UserCategories { get; set; }
     }
