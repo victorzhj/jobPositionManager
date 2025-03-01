@@ -2,7 +2,7 @@
 
 namespace server.Models
 {
-    public class Categorie
+    public class Category
     {
         [Key]
         public int Id { get; set; }

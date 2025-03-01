@@ -12,6 +12,8 @@ namespace server.AutoMapperConfiguration
         public AutoMapperConfiguration()
         {
             // Mapping for user
+            CreateMap<User, UserDto>();
+            CreateMap<UserDto, User>();
             CreateMap<User, UserAddDto>();
             CreateMap<UserAddDto, User>();
             CreateMap<User, UserLoginDto>();
