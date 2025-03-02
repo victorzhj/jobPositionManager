@@ -71,7 +71,11 @@ namespace server.Services
             {
                 throw new ConflictException("Email already exists");
             }
-            var user = await _userDao.AddAsync(_mapper.Map<User>(userAddDto));
+            var salt = BCrypt.Net.BCrypt.GenerateSalt();
+            userAddDto.Password = BCrypt.Net.BCrypt.HashPassword(userAddDto.Password, salt);
+            var userRegister = _mapper.Map<User>(userAddDto);
+            userRegister.Salt = salt;
+            var user = await _userDao.AddAsync(userRegister);
             return _mapper.Map<UserDto>(user);
         }
     }
